@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solution - TPA | Liquid Claims Intelligence</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-error-container": "#ffdad6",
+            "surface-container-high": "#2d2830",
+            "surface-bright": "#3c373f",
+            "on-secondary-container": "#e299ff",
+            "surface": "#161219",
+            "surface-dim": "#161219",
+            "surface-container": "#221e25",
+            "error": "#ffb4ab",
+            "surface-variant": "#38333b",
+            "surface-tint": "#ffb692",
+            "surface-container-highest": "#38333b",
+            "on-surface-variant": "#cec3d3",
+            "on-secondary": "#520071",
+            "error-container": "#93000a",
+            "inverse-primary": "#9f4200",
+            "secondary": "#ebb2ff",
+            "primary-fixed": "#ffdbcb",
+            "tertiary": "#ffb59a",
+            "surface-container-lowest": "#100d13",
+            "on-background": "#e9e0ea",
+            "secondary-fixed-dim": "#ebb2ff",
+            "secondary-fixed": "#f8d8ff",
+            "on-primary-fixed": "#341100",
+            "tertiary-container": "#5c1c00",
+            "primary-fixed-dim": "#ffb692",
+            "on-tertiary-container": "#ff6b2c",
+            "tertiary-fixed": "#ffdbcf",
+            "on-tertiary-fixed-variant": "#802a00",
+            "on-tertiary-fixed": "#380d00",
+            "tertiary-fixed-dim": "#ffb59a",
+            "inverse-surface": "#e9e0ea",
+            "inverse-on-surface": "#332f36",
+            "on-primary-container": "#fe6d00",
+            "on-secondary-fixed-variant": "#721199",
+            "primary": "#ffb692",
+            "outline": "#978d9d",
+            "on-primary-fixed-variant": "#7a3000",
+            "on-error": "#690005",
+            "surface-container-low": "#1e1a21",
+            "on-tertiary": "#5b1b00",
+            "on-primary": "#562000",
+            "secondary-container": "#721199",
+            "on-secondary-fixed": "#320047",
+            "outline-variant": "#4c4451",
+            "background": "#161219",
+            "primary-container": "#572100",
+            "on-surface": "#e9e0ea"
+          },
+          fontFamily: {
+            headline: ["Epilogue"],
+            body: ["Epilogue"],
+            label: ["Epilogue"]
+          },
+          borderRadius: {
+            DEFAULT: "1rem",
+            lg: "2rem",
+            xl: "3rem",
+            full: "9999px"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Epilogue', sans-serif; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    @keyframes liquid-drift {
+      0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+      50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+      100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    }
+    .liquid-shape { animation: liquid-drift 8s ease-in-out infinite; }
+    .glass-card {
+      background: rgba(114, 17, 153, 0.4);
+      backdrop-filter: blur(20px);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary overflow-x-hidden">
+  <!-- TopAppBar -->
+  <nav class="fixed top-0 w-full z-50 bg-[#161219]/80 backdrop-blur-xl shadow-[0_20px_50px_rgba(50,0,71,0.15)] flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+    <div class="text-2xl font-black text-[#ffb692] uppercase italic font-['Epilogue'] tracking-tight">Solution - TPA</div>
+    <div class="hidden md:flex items-center gap-10">
+      <a class="font-['Epilogue'] font-bold tracking-tight text-[#ffb692] border-b-2 border-[#ffb692] pb-1 hover:scale-105 transition-all duration-300 ease-out" href="#">Solutions</a>
+      <a class="font-['Epilogue'] font-bold tracking-tight text-[#ebb2ff] opacity-80 hover:scale-105 hover:text-[#ffb692] transition-all duration-300 ease-out" href="#">Efficiency</a>
+      <a class="font-['Epilogue'] font-bold tracking-tight text-[#ebb2ff] opacity-80 hover:scale-105 hover:text-[#ffb692] transition-all duration-300 ease-out" href="#">Technology</a>
+      <a class="font-['Epilogue'] font-bold tracking-tight text-[#ebb2ff] opacity-80 hover:scale-105 hover:text-[#ffb692] transition-all duration-300 ease-out" href="#">Contact</a>
+    </div>
+    <button class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform duration-200 shadow-lg shadow-on-secondary/20">
+      Get Analyzed
+    </button>
+  </nav>
+  <main class="pt-24">
+    <!-- Hero Section / Section 1: Dramatically Reduced Retainer Fees -->
+    <section class="relative min-h-screen flex items-center px-8 md:px-20 overflow-hidden">
+      <div class="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-secondary-container/30 blur-[120px] rounded-full"></div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center z-10 w-full">
+        <div class="space-y-8">
+          <span class="text-primary font-bold tracking-[0.3em] uppercase text-sm block">Economic Evolution</span>
+          <h1 class="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.85] text-on-background">
+            Reduced <br/> <span class="text-primary italic">Retainers</span>
+          </h1>
+          <p class="text-lg md:text-xl text-on-surface-variant max-w-md leading-relaxed">
+            Traditional TPAs charge massive retainer fees. Our technology-driven approach eliminates excessive headcount, passing savings directly to you.
+          </p>
+          <div class="flex flex-wrap gap-6 pt-4">
+            <button class="bg-primary text-on-primary px-10 py-5 rounded-full text-lg font-bold hover:scale-105 transition-all shadow-xl shadow-primary/10">
+              Cut Costs Now
+            </button>
+            <button class="glass-card text-secondary px-10 py-5 rounded-full text-lg font-bold border border-outline-variant/15 hover:bg-secondary-container/60 transition-all">
+              Review Model
+            </button>
+          </div>
+        </div>
+        <div class="relative flex justify-center items-center">
+          <div class="relative w-full aspect-square max-w-[500px] liquid-shape overflow-hidden shadow-[0_0_100px_rgba(114,17,153,0.3)]">
+            <img alt="Abstract digital data sculpture" class="w-full h-full object-cover scale-110" src="https://picsum.photos/seed/liquid/800/800" />
+          </div>
+          <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 1 Details: Bento Grid Style -->
+    <section class="px-8 md:px-20 py-24">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-surface-container-low p-10 rounded-xl border border-outline-variant/5">
+          <span class="material-symbols-outlined text-primary text-4xl mb-6">group_off</span>
+          <h3 class="text-2xl font-bold mb-4">No Excessive Headcount</h3>
+          <p class="text-on-surface-variant">AI automation means we don't need large teams sitting idle waiting for claims.</p>
+        </div>
+        <div class="bg-surface-container-low p-10 rounded-xl border border-outline-variant/5">
+          <span class="material-symbols-outlined text-primary text-4xl mb-6">explore</span>
+          <h3 class="text-2xl font-bold mb-4">New Market Opportunities</h3>
+          <p class="text-on-surface-variant">Enter spaces like workers' comp that were previously cost-prohibitive due to high entry fees.</p>
+        </div>
+        <div class="bg-surface-container-low p-10 rounded-xl border border-outline-variant/5">
+          <span class="material-symbols-outlined text-primary text-4xl mb-6">bolt</span>
+          <h3 class="text-2xl font-bold mb-4">Technology-First Efficiency</h3>
+          <p class="text-on-surface-variant">Our systems handle routine tasks, letting experts focus exclusively on complex claims.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Section 2: Instant Scalability Without Compromise -->
+    <section class="px-8 md:px-20 py-32 space-y-16">
+      <div class="flex flex-col md:flex-row justify-between items-end gap-6">
+        <div class="max-w-xl">
+          <h2 class="text-4xl md:text-6xl font-bold tracking-tight text-on-background">Instant Scalability</h2>
+          <p class="text-on-surface-variant mt-4 text-lg">Our technology foundation allows us to scale up or down instantly based on your volume needs—with zero impact on quality.</p>
+        </div>
+        <div class="text-primary font-black text-8xl opacity-10 leading-none">02</div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-7 bg-surface-container-low rounded-xl p-12 relative overflow-hidden group">
+          <div class="relative z-10 space-y-6">
+            <h3 class="text-3xl font-bold text-secondary">Zero Hiring Delays</h3>
+            <p class="text-on-surface-variant max-w-xs">Scale up immediately when demand increases—no waiting for recruitment or training cycles.</p>
+            <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-on-primary">trending_up</span>
+            </div>
+          </div>
+          <div class="absolute top-0 right-0 w-1/2 h-full grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">
+            <img alt="Fluid scalability" class="h-full object-cover" src="https://picsum.photos/seed/scalability/600/400" />
+          </div>
+        </div>
+        <div class="md:col-span-5 bg-surface-container-highest rounded-xl p-12 flex flex-col justify-between border border-outline-variant/5">
+          <div class="space-y-4">
+            <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">payments</span>
+            <h3 class="text-2xl font-bold">Pay Only for Need</h3>
+            <p class="text-on-surface-variant">Scale back down when demand subsides—no need to keep extra staff on payroll or maintain heavy infrastructure.</p>
+          </div>
+          <div class="pt-8 flex -space-x-4">
+            <div class="w-12 h-12 rounded-full border-4 border-surface bg-primary"></div>
+            <div class="w-12 h-12 rounded-full border-4 border-surface bg-secondary"></div>
+            <div class="w-12 h-12 rounded-full border-4 border-surface bg-surface-bright"></div>
+          </div>
+        </div>
+        <div class="md:col-span-12 bg-surface-container-low rounded-xl p-12 flex flex-col md:flex-row gap-12 items-center">
+          <div class="flex-1 space-y-6">
+            <h3 class="text-3xl font-bold">Consistent Quality at Any Scale</h3>
+            <p class="text-on-surface-variant">Our tech foundation ensures the same high-quality service whether you have 10 or 10,000 claims. Automation standardizes excellence.</p>
+            <a class="inline-flex items-center gap-2 text-primary font-bold group" href="#">
+              Explore Scalability Metrics
+              <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+            </a>
+          </div>
+          <div class="w-48 h-48 rounded-full bg-surface-container-high flex items-center justify-center border-4 border-primary/20">
+            <span class="text-4xl font-black text-secondary italic">100%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 3: Powered by Advanced AI Technology -->
+    <section class="bg-surface-container-low py-32 rounded-t-[3rem] md:rounded-t-[5rem]">
+      <div class="max-w-7xl mx-auto px-8 md:px-20 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div class="order-2 lg:order-1 relative">
+          <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl bg-surface">
+            <img alt="AI Intelligence Visualization" class="w-full h-[600px] object-cover" src="https://picsum.photos/seed/ai/800/600" />
+          </div>
+          <div class="absolute -bottom-10 -right-10 glass-card p-8 rounded-xl border border-outline-variant/20 z-20 max-w-[280px] hidden md:block">
+            <p class="text-secondary font-bold text-lg italic">"AI that doesn't just assist—it transforms."</p>
+            <div class="mt-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-primary"></div>
+              <span class="text-xs uppercase tracking-widest font-bold">Neural Core</span>
+            </div>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2 space-y-10">
+          <h2 class="text-5xl md:text-7xl font-bold leading-tight">Advanced <br/><span class="text-primary">AI Systems</span></h2>
+          <p class="text-xl text-on-surface-variant leading-relaxed">
+            Our custom-built AI systems don't just assist—they transform the entire claims process from intake to resolution.
+          </p>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-4">
+              <div class="mt-1 w-6 h-6 rounded-full bg-primary flex-shrink-0 flex items-center justify-center">
+                <span class="material-symbols-outlined text-[14px] font-bold text-on-primary">chat</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">Real-time Live Chat</h4>
+                <p class="text-on-surface-variant">Instant insights with direct access to claims data via conversational AI.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="mt-1 w-6 h-6 rounded-full bg-primary flex-shrink-0 flex items-center justify-center">
+                <span class="material-symbols-outlined text-[14px] font-bold text-on-primary">security</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">AI Risk Mitigation</h4>
+                <p class="text-on-surface-variant">Analyzing claims patterns to detect and mitigate hidden risks before they escalate.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="mt-1 w-6 h-6 rounded-full bg-primary flex-shrink-0 flex items-center justify-center">
+                <span class="material-symbols-outlined text-[14px] font-bold text-on-primary">dashboard</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">Personalized Dashboards</h4>
+                <p class="text-on-surface-variant">Customized live status updates tailored to each client's unique requirements.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-32 px-8 text-center">
+      <div class="max-w-4xl mx-auto bg-primary-container rounded-xl py-24 px-12 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+          <div class="absolute -top-20 -left-20 w-80 h-80 bg-primary blur-[100px] rounded-full"></div>
+          <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-secondary blur-[100px] rounded-full"></div>
+        </div>
+        <h2 class="text-4xl md:text-6xl font-black mb-8 z-10 relative">Ready to <br/><span class="text-primary italic">Transform?</span></h2>
+        <p class="text-on-surface-variant text-lg mb-12 max-w-lg mx-auto z-10 relative">Join the claims revolution and experience the power of technology-driven TPA services.</p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-6 z-10 relative">
+          <button class="bg-primary text-on-primary px-12 py-5 rounded-full text-xl font-black uppercase tracking-tighter hover:scale-110 transition-transform">
+            Get Started
+          </button>
+          <button class="text-on-primary-container font-bold text-lg hover:underline underline-offset-8 transition-all">
+            Talk to an Expert
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="w-full rounded-t-[3rem] mt-20 bg-[#100d13] flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8">
+    <div class="flex flex-col gap-4 items-center md:items-start">
+      <div class="text-lg font-bold text-[#ebb2ff] font-['Epilogue']">Solution - TPA</div>
+      <p class="font-['Epilogue'] text-sm tracking-wide uppercase text-[#ebb2ff]/60">© 2024 Liquid Claims Intelligence. Meticulously Engineered.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-10">
+      <a class="font-['Epilogue'] text-sm tracking-wide uppercase text-[#ebb2ff]/60 hover:text-[#ffb692] transition-colors" href="#">Efficiency</a>
+      <a class="font-['Epilogue'] text-sm tracking-wide uppercase text-[#ebb2ff]/60 hover:text-[#ffb692] transition-colors" href="#">Scalability</a>
+      <a class="font-['Epilogue'] text-sm tracking-wide uppercase text-[#ebb2ff]/60 hover:text-[#ffb692] transition-colors" href="#">AI Systems</a>
+      <a class="font-['Epilogue'] text-sm tracking-wide uppercase text-[#ebb2ff]/60 hover:text-[#ffb692] transition-colors" href="#">LinkedIn</a>
+    </div>
+    <div class="flex gap-4">
+      <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-xl">insights</span>
+      </div>
+      <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-xl">settings_input_component</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
