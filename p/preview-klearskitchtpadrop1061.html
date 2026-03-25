@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#593e62",
+              "tertiary": "#ff959f",
+              "on-secondary": "#530b6f",
+              "on-secondary-fixed-variant": "#753290",
+              "error-dim": "#d73357",
+              "secondary-container": "#6a2785",
+              "error": "#ff6e84",
+              "on-secondary-fixed": "#550e71",
+              "primary-container": "#c384ff",
+              "on-on-secondary-container": "#f1bfff",
+              "surface-container": "#2a0c36",
+              "tertiary-dim": "#f47786",
+              "on-error": "#490013",
+              "tertiary-fixed-dim": "#fa7c8b",
+              "on-primary-fixed-variant": "#440076",
+              "tertiary-container": "#fe7e8d",
+              "on-tertiary": "#680921",
+              "surface-container-high": "#31113e",
+              "surface-bright": "#411b50",
+              "on-primary-container": "#360061",
+              "inverse-surface": "#fff7fb",
+              "background": "#1b0425",
+              "on-tertiary-fixed": "#39000c",
+              "on-tertiary-container": "#570017",
+              "primary-fixed": "#c384ff",
+              "on-surface-variant": "#c29fca",
+              "on-primary": "#47007b",
+              "on-error-container": "#ffb2b9",
+              "outline": "#896b92",
+              "on-surface": "#fadcff",
+              "surface-variant": "#391647",
+              "secondary-fixed-dim": "#ebadff",
+              "on-tertiary-fixed-variant": "#711227",
+              "secondary-fixed": "#f1c1ff",
+              "on-primary-fixed": "#000000",
+              "surface-tint": "#cc97ff",
+              "surface-container-lowest": "#000000",
+              "inverse-on-surface": "#674b70",
+              "surface": "#1b0425",
+              "secondary-dim": "#d38aed",
+              "secondary": "#e197fc",
+              "primary": "#cc97ff",
+              "error-container": "#a70138",
+              "primary-fixed-dim": "#b970ff",
+              "surface-dim": "#1b0425",
+              "tertiary-fixed": "#ff909c",
+              "primary-dim": "#9a4be4",
+              "surface-container-highest": "#391647",
+              "on-background": "#fadcff",
+              "surface-container-low": "#22072d",
+              "inverse-primary": "#8331cd"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>.grainy-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDBHRJOPhU_3Kr_LoVS1pehXx1IxPuUlIrziHF7psxiK7aO1Kq74maf5gcea_rKbhvtfuOu9X6U6IMvgUtQ08OtVSWACLVlbny-JNlvoOM6gDtJfTmTjuVsq7IIhJxXWb4tWdSakvtMmHFyx4RMoAQwf9ZLinJlosBCi-kZPfU2pAGRXFbAcr-wnpwAqVvUyOPhvakRCFl5YhhDf7rVYAL-XMD-kPyukAKDrCqZzS2xr2VwFRvDeuIKJ4wqNqHF3s5svojDs9GNWNvk);
+    opacity: 0.03;
+    pointer-events: none
+    }
+.asymmetric-radius-1 {
+    border-radius: 3rem 1rem 3rem 1rem
+    }
+.asymmetric-radius-2 {
+    border-radius: 1rem 3rem 1rem 3rem
+    }</style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#1e0b27]/80 backdrop-blur-xl bg-gradient-to-b from-[#1e0b27] to-transparent">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-6">
+<div class="flex items-center gap-3">
+<img alt="Klear.ai Logo" class="w-8 h-8" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%23cc97ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E"/>
+<span class="text-2xl font-bold text-[#f6d9ff] font-headline tracking-tight">Klear.ai</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#9d4ee7] border-b-2 border-[#a05bba] pb-1 font-headline tracking-tight" href="#">Solutions</a>
+<a class="text-[#f6d9ff]/70 hover:text-[#f6d9ff] font-headline tracking-tight transition-colors duration-300" href="#">Efficiency</a>
+<a class="text-[#f6d9ff]/70 hover:text-[#f6d9ff] font-headline tracking-tight transition-colors duration-300" href="#">Technology</a>
+<a class="text-[#f6d9ff]/70 hover:text-[#f6d9ff] font-headline tracking-tight transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary font-headline px-6 py-2.5 rounded-full font-bold scale-95 active:scale-90 transition-transform hover:bg-primary-container">
+                Get Started
+            </button>
+</div>
+</nav>
+<main class="relative overflow-hidden pt-32">
+<div class="absolute inset-0 grainy-overlay"></div>
+<!-- Hero Section / Title -->
+<section class="max-w-7xl mx-auto px-8 mb-24 relative">
+<div class="flex flex-col items-start gap-4">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high border border-outline-variant/15">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-secondary">The Future of Claims</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-extrabold font-headline tracking-tighter text-on-surface leading-[0.9]">
+                    Klear.ai <span class="text-primary-container">TPA</span><br/>Solutions
+                </h1>
+</div>
+<!-- Atmospheric connector background -->
+<div class="absolute -right-20 -top-20 w-[600px] h-[600px] bg-primary/10 blur-[120px] rounded-full -z-10"></div>
+</section>
+<!-- Section 1: Efficiency & Savings -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="relative order-2 md:order-1">
+<div class="asymmetric-radius-1 bg-surface-container-low overflow-hidden relative group aspect-square">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="abstract architectural geometry with sharp shadows and purple neon light accents in a desert nocturne style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTR-OYMDKKJDw6mNpjT_wZVB_SwoLn5-8mmZw_6AYnyw3i_5LrCqlp1ue3IcqgWas9N542hqUyuhY-3jydWgtfxbHQDfFcP5FkddlDwJI4POn6axVCmHMn7sb5acSSfQp9fmiEgWJrtjeP1Z-p_YrYWvyWfb4xMhrxehkBw3UbfqBmVqn88nTqSSoG_W8at1XQcywpOkjhz5JOxITdk-HVhW7Yq6ySAP-3XLOAOR16eYAuJpa8uYsy5MBM8czCisjsMbAaeOM2XC7t"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-surface-container-low via-transparent to-primary/20"></div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/20 blur-3xl rounded-full"></div>
+</div>
+<div class="space-y-8 order-1 md:order-2">
+<h2 class="text-4xl md:text-5xl font-bold font-headline leading-tight">Dramatically Reduced <span class="text-secondary">Retainer Fees</span></h2>
+<p class="text-lg text-on-surface-variant leading-relaxed font-body">
+                        "Traditional TPAs charge massive retainer fees to maintain large teams on standby for claims business. Our technology-driven approach eliminates the need for excessive headcount, passing those savings directly to you."
+                    </p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<span class="block font-bold text-on-surface">No Excessive Headcount Requirements</span>
+<span class="text-sm text-on-surface-variant">AI automation means we don't need large teams sitting idle waiting for claims</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<span class="block font-bold text-on-surface">New Market Opportunities</span>
+<span class="text-sm text-on-surface-variant">Enter spaces like workers' comp that were previously cost-prohibitive</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<span class="block font-bold text-on-surface">Technology-First Efficiency</span>
+<span class="text-sm text-on-surface-variant">Our systems handle routine tasks, letting experts focus on complex claims</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Section 2: Scalability -->
+<section class="mb-32 relative bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<h2 class="text-4xl md:text-5xl font-bold font-headline leading-tight">Instant Scalability <span class="text-primary">Without Compromise</span></h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                            "Traditional TPAs struggle to scale quickly because they rely on hiring and training new staff. Our technology foundation allows us to scale up or down instantly based on your volume needs—with zero impact on quality."
+                        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="p-6 bg-surface-container-high rounded-lg border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary mb-4">bolt</span>
+<h4 class="font-bold mb-2">No Hiring Delays</h4>
+<p class="text-xs text-on-surface-variant">Scale up immediately when demand increases—no waiting for recruitment</p>
+</div>
+<div class="p-6 bg-surface-container-high rounded-lg border-l-4 border-secondary">
+<span class="material-symbols-outlined text-secondary mb-4">account_balance_wallet</span>
+<h4 class="font-bold mb-2">Pay Only for Need</h4>
+<p class="text-xs text-on-surface-variant">Scale back down when demand subsides—no need for extra staff payroll</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-6 bg-surface-container-highest rounded-xl">
+<span class="material-symbols-outlined text-tertiary text-3xl">verified</span>
+<p class="text-sm font-medium">Consistent Quality at Any Scale: Our tech foundation ensures the same high-quality service whether you have 10 or 10,000 claims.</p>
+</div>
+</div>
+<div class="relative">
+<div class="asymmetric-radius-2 bg-background aspect-[4/3] overflow-hidden p-4">
+<img class="w-full h-full object-cover rounded-xl opacity-80" data-alt="digital data visualization of global connectivity with purple and blue light trails across a dark planetary horizon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz7tCqLq-BiMxC2SlRkKJlS2EzMTfrdd8y0YQ5xZkILCUb3JXqPFgDyriOH_CMX3T4F1gquqpi_wdhV3D19g83qKOrT2dpWR5vhMaf3GB8-3jSh0oU3OpgD0vwq8uzcJ0UtSqo4QgBYjpDK3jjV-PT-isepxKckmGgHGz9kice9jRfhlaMpE8Iwd9zh57f8QLpDn58qyy5UC1nWo8pVtrmmp2gf8HFnzXwI3-HTG3OHkQBQGjMiG0bClWxxcGIxWHguKq24bSEy6BF"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Technology Grid -->
+<section class="max-w-7xl mx-auto px-8 mb-40">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<h2 class="text-4xl md:text-5xl font-bold font-headline mb-6">Powered by Advanced <span class="text-primary-container">AI Technology</span></h2>
+<p class="text-lg text-on-surface-variant">"Our custom-built AI systems don't just assist—they transform the entire claims process from intake to resolution."
+</p>
+</div>
+<div class="grid md:grid-cols-4 gap-6">
+<!-- Bento Item 1 -->
+<div class="md:col-span-2 bg-surface-container border border-outline-variant/10 rounded-xl p-8 hover:bg-surface-container-high transition-all duration-500 group">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">chat</span>
+</div>
+<h3 class="text-xl font-bold font-headline mb-3">Real-time Live Chat</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Chat with claims data directly—ask specific questions and receive instant, data-backed insights without manual reporting.</p>
+<div class="w-full h-1 bg-outline-variant/20 rounded-full overflow-hidden">
+<div class="h-full w-2/3 bg-primary"></div>
+</div>
+</div>
+<!-- Bento Item 2 -->
+<div class="md:col-span-2 bg-surface-container border border-outline-variant/10 rounded-xl p-8 hover:bg-surface-container-high transition-all duration-500 group">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary">analytics</span>
+</div>
+<h3 class="text-xl font-bold font-headline mb-3">Risk Mitigation AI</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Deep analysis of claims patterns to detect hidden issues before they escalate, saving millions in potential loss.</p>
+<div class="flex gap-2">
+<span class="px-2 py-1 rounded-md bg-secondary/20 text-[10px] text-secondary font-bold">PATTERN RECOGNITION</span>
+<span class="px-2 py-1 rounded-md bg-secondary/20 text-[10px] text-secondary font-bold">PREDICTIVE DATA</span>
+</div>
+</div>
+<!-- Bento Item 3 -->
+<div class="md:col-span-2 bg-surface-container border border-outline-variant/10 rounded-xl p-8 hover:bg-surface-container-high transition-all duration-500 group">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary">dashboard_customize</span>
+</div>
+<h3 class="text-xl font-bold font-headline mb-3">Custom Dashboards</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Personalized to your unique KPIs and needs with live, second-by-second updates on claim status and resolution speed.</p>
+</div>
+<!-- Bento Item 4 -->
+<div class="md:col-span-2 bg-surface-container border border-outline-variant/10 rounded-xl p-8 hover:bg-surface-container-high transition-all duration-500 group">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">psychology</span>
+</div>
+<h3 class="text-xl font-bold font-headline mb-3">Personalized Intelligence</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">AI systems specifically fine-tuned to each client's unique internal processes and regulatory requirements.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="rounded-xl bg-gradient-to-br from-primary/20 via-surface-container-high to-secondary/10 p-12 text-center relative overflow-hidden">
+<div class="absolute inset-0 grainy-overlay"></div>
+<h2 class="text-4xl font-bold font-headline mb-6 relative z-10">Ready to evolve your claims strategy?</h2>
+<p class="text-on-surface-variant mb-10 max-w-2xl mx-auto relative z-10 text-lg">Experience the next generation of TPA services where technology drives efficiency and human expertise drives results.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold hover:bg-primary-container transition-all">Schedule a Demo</button>
+<button class="bg-surface-container-highest text-on-surface px-10 py-4 rounded-full font-bold hover:bg-surface-bright transition-all">View Case Studies</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-[#1e0b27] border-t border-[#4c4451]/15 pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8 font-body text-sm leading-relaxed">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="text-lg font-bold text-[#f6d9ff] font-headline">Klear.ai</span>
+<p class="text-[#f6d9ff]/50">© 2024 Klear.ai. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-[#f6d9ff]/50 hover:text-[#a05bba] transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-[#f6d9ff]/50 hover:text-[#a05bba] transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-[#f6d9ff]/50 hover:text-[#a05bba] transition-colors opacity-80 hover:opacity-100" href="#">Security</a>
+<a class="text-[#f6d9ff]/50 hover:text-[#a05bba] transition-colors opacity-80 hover:opacity-100" href="#">Cookie Policy</a>
+</div>
+</div>
+</footer>
+</body>
+</html>
